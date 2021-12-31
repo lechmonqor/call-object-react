@@ -18,11 +18,12 @@ export default function Chat(props) {
       ? callObject.participants().local.user_name
       : 'Guest';
     setChatHistory([
-      ...chatHistory,
-      {
-        sender: name,
-        message: inputValue,
-      },
+        {
+          sender: name,
+          message: InputValue, 
+        },
+        ...chatHistory,
+        
     ]);
     setInputValue('');
   }
@@ -42,11 +43,11 @@ export default function Chat(props) {
         ? participants[event.fromId].user_name
         : 'Guest';
       setChatHistory([
-        ...chatHistory,
         {
           sender: name,
           message: event.data.message,
         },
+        ...chatHistory,
       ]);
       // Make other icons light up
       props.notification();
