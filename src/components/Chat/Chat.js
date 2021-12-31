@@ -4,7 +4,7 @@ import './Chat.css';
 
 export default function Chat(props) {
   const callObject = useContext(CallObjectContext);
-  const [inputValue, setInputValue] = useState('');
+  const [InputValue, setInputValue] = useState('');
   const [chatHistory, setChatHistory] = useState([]);
 
   const handleChange = (event) => {
